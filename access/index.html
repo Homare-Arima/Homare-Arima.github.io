@@ -10,12 +10,15 @@
   <header>
     <div class="container">
       <div class="header-left">
-        <!-- <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png"> -->
         <h2>動的界面化学研究室</h2>
       </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="/index.html">Home</a>
+      <div class="menu-icon" id="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>      
+      <div class="header-right" id="nav-menu">
+        <a href="index.html">Home</a>
         <a href="/news/">News</a>
         <a href="/members/">Members</a>
         <a href="/publication/">Publication</a>
@@ -61,5 +64,13 @@
       <p>Copyright © Dynamic Interfacial Chemistry Laboratory. All right reserved.</p>
     </div>
   </footer>
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navMenu = document.getElementById("nav-menu");
+  
+    menuIcon.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>  
 </body>
 </html>
