@@ -244,18 +244,6 @@
   
   @media all and (max-width: 670px) {
     .header-right {
-      display: none;
-      flex-direction: column;
-      background-color: rgba(44, 63, 62, 0.95);
-      position: absolute;
-      top: 65px;
-      right: 0;
-      width: 100%;
-      text-align: center;
-      z-index: 9;
-    }
-  
-    .header-right {
       display: flex;
       flex-direction: column;
       background-color: rgba(44, 63, 62, 0.95);
@@ -309,6 +297,7 @@
     .message-wrapper .btn {
       width: 100%;
     }
+  }
     @media all and (max-width: 670px) {
       .menu-icon {
         width: 30px;
