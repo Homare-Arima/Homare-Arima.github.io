@@ -254,6 +254,9 @@ footer {
     max-width: 300px;
     text-align: center;
     z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
   }
   
 
@@ -327,10 +330,6 @@ footer {
     top: 22px;
   }   
 
-  .header-right {
-    display: none;
-  }
-
   .header-right.active {
     display: flex;
     flex-direction: column;
@@ -339,6 +338,10 @@ footer {
     right: 0;
     top: 65px;
     width: 100%;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    
   }
 
   .header-right.active a {
