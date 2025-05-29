@@ -252,43 +252,109 @@
   }
   
   @media all and (max-width: 670px) {
-    .header-right {
-      display: none;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .top-wrapper .btn {
-      width: 100%;
-    }
-  
-    .twitter {
-      margin-top: 10px;
-    }
-  
-    .top-wrapper {
-      text-align: left;
-    }
-  
-    .top-wrapper h1 {
-      font-size: 24px;
-    }
-  
-    .top-wrapper p {
-      font-size: 14px;
-    }
-  
-    .lesson {
-      width: 100%;
-    }
-  
-    .lesson-wrapper {
-      height: 1700px;
-    }
-  
-    .message-wrapper .btn {
-      width: 100%;
-    }
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(44, 63, 62, 0.95);
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 60%; /* 例えば60% */
+    max-width: 300px;
+    text-align: center;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
   }
+  
+
+  .header-right a {
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }  
+
+  .menu-icon {
+    display: block;
+  }
+
+  .top-wrapper .btn {
+    width: 100%;
+  }
+
+  .twitter {
+    margin-top: 10px;
+  }
+
+  .top-wrapper {
+    text-align: left;
+  }
+
+  .top-wrapper h1 {
+    font-size: 24px;
+  }
+
+  .top-wrapper p {
+    font-size: 14px;
+  }
+
+  .lesson {
+    width: 100%;
+  }
+
+  .lesson-wrapper {
+    height: 1700px;
+  }
+
+  .message-wrapper .btn {
+    width: 100%;
+  }
+  .menu-icon {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    padding: 20px 0;
+  }
+  
+  .menu-icon span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+    margin: 20px 0;
+  }
+  
+  .menu-icon span:nth-child(1) {
+    top: 0;
+  }
+  
+  .menu-icon span:nth-child(2) {
+    top: 11px;
+  }
+  
+  .menu-icon span:nth-child(3) {
+    top: 22px;
+  }   
+
+  .header-right.active {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(44, 63, 62, 0.9);
+    position: absolute;
+    right: 0;
+    top: 65px;
+    width: 100%;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-right.active a {
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+}  
